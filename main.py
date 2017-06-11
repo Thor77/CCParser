@@ -1,10 +1,11 @@
+import json
+
+from bottle import route, run
+from cc_platform import Platform
+from pluginfileloader import PluginFileLoader
+
 host = 'localhost'
 port = 8080
-
-from pluginfileloader import PluginFileLoader
-from cc_platform import Platform
-from bottle import route, run, template
-import json
 
 cc_platforms = []
 
