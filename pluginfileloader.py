@@ -1,5 +1,6 @@
 import os
 
+
 class PluginFileLoader:
 
     def __init__(self, path, blueprint=None):
@@ -24,6 +25,7 @@ class PluginFileLoader:
             if f.endswith('.py'):
                 __import__(self.path + '.' + f.replace('.py', '', 1))
         self.classes = self.blueprint.__subclasses__()
+
 
 class Plugin:
     def get_name(self):

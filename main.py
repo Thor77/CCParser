@@ -9,6 +9,7 @@ port = 8080
 
 cc_platforms = []
 
+
 @route('/')
 def get_data():
     data = {}
@@ -18,9 +19,9 @@ def get_data():
             data[pl.get_name()] = pl.get_data()
     return json.dumps(data)
 
+
 for plugin in PluginFileLoader('cc_platforms', Platform):
     pl = plugin()
     cc_platforms.append(pl)
 
-#route(url, callback=func)
 run(host=host, port=8080)
